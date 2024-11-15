@@ -1,0 +1,27 @@
+#!/bin/bash
+#PBS -q qprod
+#PBS -l select=6:ncpus=24,walltime=08:05:00
+#PBS -A OPEN-19-37
+#PBS -o outlogs
+#PBS -e errlogs
+
+cd /home/xchleb07/PDD/
+
+digits=12       # number of digits in seed
+a=$(date +%s)
+seed=$((a*RANDOM))
+
+sonications=6
+nodesNum=6
+problem=Flower
+
+mkdir Outputs/HIFU/${problem}/PP/${nodesNum}/${sonications}/${PBS_ARRAY_INDEX}
+LOG_DIR="Outputs/HIFU/${problem}/PP/${nodesNum}/${sonications}/${PBS_ARRAY_INDEX}/"
+
+while [ ${#seed} -lt 12 ]; do
+    seed="${seed}$RANDOM"
+done
+
+ml intel/2019a
+
+mpirun -np ${nodesNum} ./hifuPp ${seed} ${LOG_DIR}

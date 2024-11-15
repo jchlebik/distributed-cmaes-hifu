@@ -1,0 +1,271 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 19.0.1.144 Build 20181018
+
+Compiler options: -std=c++11 -g -mkl -ffast-math -xHost -qopenmp -qopt-report=5 -qopt-report-phase=vec,par -vecabi=cmdtarget -o hifuTest
+
+Begin optimization report for: main()
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into hifuTest.cc(63,26)
+   remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15427: loop was completely unrolled
+   remark #15399: vectorization support: unroll factor set to 3
+   remark #15309: vectorization support: normalized vectorization overhead 0.222
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 0.750 
+   remark #15478: estimated potential speedup: 4.360 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into hifuTest.cc(65,28)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into hifuTest.cc(65,28)
+   remark #15388: vectorization support: reference *__first has aligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.750
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.000 
+   remark #15478: estimated potential speedup: 1.710 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into hifuTest.cc(65,28)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into hifuTest.cc(66,25)
+   remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.571
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 1.450 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into hifuTest.cc(67,25)
+   remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 0.571
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.750 
+   remark #15478: estimated potential speedup: 1.450 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at hifuTest.cc(77,5)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at hifuTest.cc(79,7)
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/random.tcc(3331,7) inlined into hifuTest.cc(81,44)
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed ANTI dependence between __tmp (3333:4) and __tmp (3334:4)
+         remark #15346: vector dependence: assumed FLOW dependence between __tmp (3334:4) and __tmp (3333:4)
+         remark #15346: vector dependence: assumed ANTI dependence between __tmp (3333:4) and __tmp (3334:4)
+      LOOP END
+   LOOP END
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at hifuTest.cc(75,3)
+   remark #15333: loop was not vectorized: exception handling for a call prevents vectorization   [ hifuTest.cc(83,19) ]
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1944,7) inlined into hifuTest.cc(93,3)
+   remark #15522: loop was not vectorized: loop control flow is too complex. Try using canonical loop form from OpenMP specification
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/predefined_ops.h(43,25) inlined into hifuTest.cc(93,3)
+      remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1902,4) ]
+
+      LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1902,4) inlined into hifuTest.cc(93,3)
+         remark #15523: loop was not vectorized: loop control variable __first._M_current was found, but loop iteration count cannot be computed before executing the loop
+      LOOP END
+
+      LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1905,4) inlined into hifuTest.cc(93,3)
+         remark #15523: loop was not vectorized: loop control variable __last._M_current was found, but loop iteration count cannot be computed before executing the loop
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(341,25) inlined into hifuTest.cc(93,3)
+   remark #15522: loop was not vectorized: loop control flow is too complex. Try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1673,54) inlined into hifuTest.cc(93,3)
+   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(405,7) inlined into hifuTest.cc(93,3)
+   remark #15523: loop was not vectorized: loop control variable __last._M_current was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1866,53) inlined into hifuTest.cc(93,3)
+   remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1828,7) ]
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1828,7) inlined into hifuTest.cc(93,3)
+      remark #15523: loop was not vectorized: loop control variable __next._M_current was found, but loop iteration count cannot be computed before executing the loop
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::__adjust_heap<std::vector<float, std::allocator<float>>::iterator, std::__iterator_traits<std::vector<float, std::allocator<float>>::iterator, std::__void_t<>>::difference_type, std::remove_reference<std::vector<float, std::allocator<float>>::value_type &>::type, __gnu_cxx::__ops::_Iter_less_iter>(std::vector<float, std::allocator<float>>::iterator, std::__iterator_traits<std::vector<float, std::allocator<float>>::iterator, std::__void_t<>>::difference_type, std::__iterator_traits<std::vector<float, std::allocator<float>>::iterator, std::__void_t<>>::difference_type, std::remove_reference<std::vector<float, std::allocator<float>>::value_type &>::type, __gnu_cxx::__ops::_Iter_less_iter)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(219,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(133,7) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(238,7)
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::__insertion_sort<std::vector<float, std::allocator<float>>::iterator, __gnu_cxx::__ops::_Iter_less_iter>(std::vector<float, std::allocator<float>>::iterator, std::vector<float, std::allocator<float>>::iterator, __gnu_cxx::__ops::_Iter_less_iter)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1845,57)
+   remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1828,7) ]
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1828,7) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1856,6)
+      remark #15523: loop was not vectorized: loop control variable __next._M_current was found, but loop iteration count cannot be computed before executing the loop
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::__introsort_loop<std::vector<float, std::allocator<float>>::iterator, long, __gnu_cxx::__ops::_Iter_less_iter>(std::vector<float, std::allocator<float>>::iterator, std::vector<float, std::allocator<float>>::iterator, long, __gnu_cxx::__ops::_Iter_less_iter)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1944,7)
+   remark #15522: loop was not vectorized: loop control flow is too complex. Try using canonical loop form from OpenMP specification
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/predefined_ops.h(43,25) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1954,56)
+      remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1902,4) ]
+
+      LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1902,4) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1954,56)
+         remark #15523: loop was not vectorized: loop control variable __first._M_current was found, but loop iteration count cannot be computed before executing the loop
+      LOOP END
+
+      LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1905,4) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1954,56)
+         remark #15523: loop was not vectorized: loop control variable __last._M_current was found, but loop iteration count cannot be computed before executing the loop
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(346,4) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1949,8)
+   remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(219,7) ]
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(219,7) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1949,8)
+      remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+   LOOP END
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(133,7) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1949,8)
+      remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(405,7) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1949,8)
+   remark #15536: loop was not vectorized: inner loop throttling prevents vectorization of this outer loop. Refer to inner loop message for more details.   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(219,7) ]
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(219,7) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1949,8)
+      remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+   LOOP END
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_heap.h(133,7) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algo.h(1949,8)
+      remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::__fill_n_a<std::_Vector_base<float, std::allocator<float>>::pointer, std::vector<float, std::allocator<float>>::size_type, std::iterator_traits<std::vector<float, std::allocator<float>>::pointer>::value_type>(std::_Vector_base<float, std::allocator<float>>::pointer, std::vector<float, std::allocator<float>>::size_type, const std::iterator_traits<std::vector<float, std::allocator<float>>::pointer>::value_type &)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7)
+   remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 1.857
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 0.430 
+   remark #15478: estimated potential speedup: 6.410 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 2.143
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 0.430 
+   remark #15478: estimated potential speedup: 6.410 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================

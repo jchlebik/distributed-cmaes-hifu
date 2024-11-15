@@ -1,0 +1,35 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 19.0.1.144 Build 20181018
+
+Compiler options: -std=c++11 -O3 -mkl -ffast-math -xhost -qopenmp-simd -qopenmp -lpthread -xhost -g -qopt-report=5 -qopt-report-phase=vec,par -vecabi=cmdtarget -o hifu_test
+
+Begin optimization report for: HeatTargetWindow::HeatTargetWindow(HeatTargetWindow *, DiscreteMap &)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/heatTargetWindow.cc(41,3)
+   remark #15523: loop was not vectorized: loop control variable row was found, but loop iteration count cannot be computed before executing the loop
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/heatTargetWindow.cc(47,5)
+      remark #15523: loop was not vectorized: loop control variable col was found, but loop iteration count cannot be computed before executing the loop
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: HeatTargetWindow::HeatTargetWindow(HeatTargetWindow *const, DiscreteMap &)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/heatTargetWindow.cc(41,3) inlined into FitnessFunc/HIFUScore/heatTargetWindow.cc(28,19)
+   remark #15523: loop was not vectorized: loop control variable row was found, but loop iteration count cannot be computed before executing the loop
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/heatTargetWindow.cc(47,5) inlined into FitnessFunc/HIFUScore/heatTargetWindow.cc(28,19)
+      remark #15523: loop was not vectorized: loop control variable col was found, but loop iteration count cannot be computed before executing the loop
+   LOOP END
+LOOP END
+===========================================================================

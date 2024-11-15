@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -q qprod
+#PBS -l select=1:ncpus=24:mpiprocs=6:ompthreads=4,walltime=08:30:00,walltime=00:10:00
+#PBS -A OPEN-19-37
+
+cd /home/xchleb07/PDD
+
+digits=12       # number of digits in seed
+a=$(date +%s)
+seed=$((a*RANDOM))
+
+sonications=3
+nodesNum=6
+
+mkdir Outputs/Bench/Circle/${nodesNum}/${sonications}/${PBS_ARRAY_INDEX}
+LOG_DIR="Outputs/Bench/Circle/${nodesNum}/${sonications}/${PBS_ARRAY_INDEX}/"
+
+while [ ${#seed} -lt 12 ]; do
+    seed="${seed}$RANDOM"
+done
+
+ml intel/2019a
+mpirun -np ${nodesNum} ./benchCircle ${seed} ${LOG_DIR}

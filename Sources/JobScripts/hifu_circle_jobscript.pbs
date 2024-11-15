@@ -1,0 +1,28 @@
+#!/bin/bash
+#PBS -q qprod
+#PBS -l select=6:ncpus=24:mpiprocs=1:ompthreads=24,walltime=08:30:00
+#PBS -A OPEN-19-37
+#PBS -o outlogs
+#PBS -e errlogs
+
+cd /home/xchleb07/PDD/
+
+digits=12       # number of digits in seed
+a=$(date +%s)
+seed=$((a*RANDOM))
+
+sonications=20
+nodesNum=6
+
+mkdir Outputs/HIFU/Circle/${nodesNum}/${sonications}/${PBS_ARRAY_INDEX}
+LOG_DIR="Outputs/HIFU/Circle/${nodesNum}/${sonications}/${PBS_ARRAY_INDEX}/"
+
+while [ ${#seed} -lt 12 ]; do
+    seed="${seed}$RANDOM"
+done
+
+ml intel/2019a
+export OMP_PROC_BIND=true
+export OMP_PLACES=cores
+
+mpirun -np ${nodesNum} --bind-to none ./hifuCircle ${seed} ${LOG_DIR}

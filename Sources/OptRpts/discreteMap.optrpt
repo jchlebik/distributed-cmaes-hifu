@@ -1,0 +1,495 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 19.0.1.144 Build 20181018
+
+Compiler options: -std=c++11 -O3 -mkl -ffast-math -xhost -qopenmp-simd -qopenmp -lpthread -xhost -g -qopt-report=5 -qopt-report-phase=vec,par -vecabi=cmdtarget -o hifu_test
+
+Begin optimization report for: operator*(DiscreteMap *, const DiscreteMap &, const DiscreteMap &)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(109,31)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(109,31)
+      remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.667
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 3.270 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(109,31)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(111,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between res (114:8) and at (114:8)
+   remark #15346: vector dependence: assumed ANTI dependence between at (114:8) and res (114:8)
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(111,3)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: operator-(DiscreteMap *, const DiscreteMap &, const DiscreteMap &)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(136,31)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(136,31)
+      remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.667
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 3.270 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(136,31)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(138,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between res (141:8) and at (141:8)
+   remark #15346: vector dependence: assumed ANTI dependence between at (141:8) and res (141:8)
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(138,3)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: DiscreteMap::sum(DiscreteMap *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(63,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(63,3)
+   remark #15389: vectorization support: reference U80_V->_M_start[U82_V] has unaligned access   [ FitnessFunc/HIFUScore/discreteMap.cc(66,26) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 3.500
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.620 
+   remark #15478: estimated potential speedup: 3.580 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(63,3)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: DiscreteMap::getWindowedMap(DiscreteMap *, DiscreteMap *, HeatTargetWindow &)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(81,42)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(81,42)
+      remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.667
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 3.270 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(81,42)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(83,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(85,7)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(85,7)
+         remark #15389: vectorization support: reference at (87:19) has unaligned access   [ FitnessFunc/HIFUScore/discreteMap.cc(87,19) ]
+         remark #15389: vectorization support: reference this->_M_start[(y+yStart)*xRangeOriginal+xStart+x] has unaligned access   [ FitnessFunc/HIFUScore/discreteMap.cc(87,43) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 8
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15450: unmasked unaligned unit stride loads: 1 
+         remark #15451: unmasked unaligned unit stride stores: 1 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 5 
+         remark #15477: vector cost: 0.750 
+         remark #15478: estimated potential speedup: 5.000 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(85,7)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: DiscreteMap::createLesionMap(DiscreteMap *, Medium &)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(282,38)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(282,38)
+      remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.667
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 3.270 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(282,38)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(284,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between lesionMap (287:34) and lesionMap (287:34)
+   remark #15346: vector dependence: assumed OUTPUT dependence between lesionMap (287:34) and lesionMap (287:34)
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(284,3)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: DiscreteMap::getCirclesMap(DiscreteMap *, unsigned int, unsigned int, float, std::__cxx11::string *, std::function<int (int, int)> *)
+
+    Report from: Code generation optimizations [cg]
+
+/apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/basic_string.h(740:6)::_ZN11DiscreteMap13getCirclesMapEjjfNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt8functionIFiiiEE:  Assume directive not useful: removing
+
+/apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/basic_string.h(741:14)::_ZN11DiscreteMap13getCirclesMapEjjfNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt8functionIFiiiEE:  Assume directive not useful: removing
+
+/apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/basic_string.h(741:6)::_ZN11DiscreteMap13getCirclesMapEjjfNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt8functionIFiiiEE:  Assume directive not useful: removing
+
+/apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/basic_string.h(742:6)::_ZN11DiscreteMap13getCirclesMapEjjfNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt8functionIFiiiEE:  Assume directive not useful: removing
+
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_uninitialized.h(82,23) inlined into FitnessFunc/HIFUScore/discreteMap.cc(242,29)
+<Multiversioned v1>
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <__cur->x>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,7) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <__cur->x>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,7) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <__first._M_current->x>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,42) ]
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <__cur->y>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,7) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <__cur->y>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,7) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <__first._M_current->y>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,42) ]
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <__cur->radius>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,7) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <__cur->radius>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,7) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <__first._M_current->radius>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,42) ]
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <__cur->circleValue>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,7) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <__cur->circleValue>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,7) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <__first._M_current->circleValue>, stride is 4   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(75,42) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.006
+   remark #15452: unmasked strided loads: 8 
+   remark #15453: unmasked strided stores: 4 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 17 
+   remark #15477: vector cost: 41.000 
+   remark #15478: estimated potential speedup: 0.410 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_uninitialized.h(82,23) inlined into FitnessFunc/HIFUScore/discreteMap.cc(242,29)
+<Multiversioned v2>
+   remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(266,3)
+   remark #26015: Exception can be thrown by the call to operator+(DiscreteMap *, const DiscreteMap &, const DiscreteMap &)   [ FitnessFunc/HIFUScore/discreteMap.cc(268,25) ]
+   remark #15333: loop was not vectorized: exception handling for a call prevents vectorization   [ FitnessFunc/HIFUScore/discreteMap.cc(268,25) ]
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(107,4) inlined into FitnessFunc/HIFUScore/discreteMap.cc(270,3)
+   remark #15382: vectorization support: call to function operator delete(void *) cannot be vectorized   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/ext/new_allocator.h(125,2) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(252,18)
+   remark #15333: loop was not vectorized: exception handling for a call prevents vectorization   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/locale_facets.h(876,8) ]
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::vector<DiscreteMap, std::allocator<DiscreteMap>>::_M_realloc_insert<std::remove_reference<std::vector<DiscreteMap, std::allocator<DiscreteMap>>::value_type &>::type>(std::vector<DiscreteMap, std::allocator<DiscreteMap>> *, std::vector<DiscreteMap, std::allocator<DiscreteMap>>::iterator, std::remove_reference<std::vector<DiscreteMap, std::allocator<DiscreteMap>>::value_type &>::type &&)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_uninitialized.h(82,23) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/vector.tcc(447,8)
+   remark #15523: loop was not vectorized: loop control variable __cur was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_uninitialized.h(82,23) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/vector.tcc(454,8)
+   remark #15382: vectorization support: call to function std::vector<int, std::allocator<int>>::vector(std::vector<int, std::allocator<int>> *, std::vector<int, std::allocator<int>> &&) cannot be vectorized   [ FitnessFunc/HIFUScore/discreteMap.h(67,7) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(107,4) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/vector.tcc(469,7)
+   remark #15382: vectorization support: call to function operator delete(void *) cannot be vectorized   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/ext/new_allocator.h(125,2) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between __first->_M_start (285:2) and call:operator delete(void *) (125:2)
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::_Destroy_aux<false>::__destroy<std::_Vector_base<DiscreteMap, std::allocator<DiscreteMap>>::pointer>(std::_Vector_base<DiscreteMap, std::allocator<DiscreteMap>>::pointer, std::_Vector_base<DiscreteMap, std::allocator<DiscreteMap>>::pointer)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(107,4)
+   remark #15382: vectorization support: call to function operator delete(void *) cannot be vectorized   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/ext/new_allocator.h(125,2) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between __first->_M_start (285:2) and call:operator delete(void *) (125:2)
+LOOP END
+===========================================================================
+
+Begin optimization report for: DiscreteMap::createTargetsMap(DiscreteMap *, unsigned int, unsigned int, float, std::vector<CircleInfo, std::allocator<CircleInfo>> &, std::function<int (int, int)> *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(333,21)
+   remark #15523: loop was not vectorized: loop control variable U99_V.U99_V was found, but loop iteration count cannot be computed before executing the loop
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(344,5)
+      remark #26015: Exception can be thrown by the call to (Indirect call)   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/std_function.h(687,14) ]
+      remark #15333: loop was not vectorized: exception handling for a call prevents vectorization   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/std_function.h(687,14) ]
+
+      LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(323,5) inlined into FitnessFunc/HIFUScore/discreteMap.cc(346,26)
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 4
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 1 
+         remark #15477: vector cost: 0.250 
+         remark #15478: estimated potential speedup: 3.940 
+         remark #15488: --- end vector cost summary ---
+      LOOP END
+
+      LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(348,7)
+         remark #26015: Exception can be thrown by the call to (Indirect call)   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/std_function.h(687,14) ]
+         remark #15333: loop was not vectorized: exception handling for a call prevents vectorization   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/std_function.h(687,14) ]
+
+         LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(323,5) inlined into FitnessFunc/HIFUScore/discreteMap.cc(350,28)
+            remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+            remark #15305: vectorization support: vector length 4
+            remark #15309: vectorization support: normalized vectorization overhead 0.667
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 1 
+            remark #15477: vector cost: 0.750 
+            remark #15478: estimated potential speedup: 1.320 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::vector<int, std::allocator<int>>::vector(std::vector<int, std::allocator<int>> *, std::vector<int, std::allocator<int>>::size_type, const std::vector<int, std::allocator<int>>::value_type &, const std::vector<int, std::allocator<int>>::allocator_type &)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_vector.h(431,9)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_vector.h(431,9)
+   remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 1.857
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.430 
+   remark #15478: estimated potential speedup: 5.140 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_vector.h(431,9)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.143
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.430 
+   remark #15478: estimated potential speedup: 5.140 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: operator+(DiscreteMap *, const DiscreteMap &, const DiscreteMap &)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(163,31)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(163,31)
+      remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.667
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 3 
+      remark #15477: vector cost: 0.750 
+      remark #15478: estimated potential speedup: 3.270 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7) inlined into FitnessFunc/HIFUScore/discreteMap.cc(163,31)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(165,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between res (168:8) and at (168:8)
+   remark #15346: vector dependence: assumed ANTI dependence between at (168:8) and res (168:8)
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(165,3)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::vector<DiscreteMap, std::allocator<DiscreteMap>>::~vector(std::vector<DiscreteMap, std::allocator<DiscreteMap>> *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_construct.h(107,4) inlined into /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_vector.h(568,2)
+   remark #15382: vectorization support: call to function operator delete(void *) cannot be vectorized   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/ext/new_allocator.h(125,2) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed ANTI dependence between __first->_M_start (285:2) and call:operator delete(void *) (125:2)
+   remark #15346: vector dependence: assumed FLOW dependence between call:operator delete(void *) (125:2) and __first->_M_start (285:2)
+LOOP END
+===========================================================================
+
+Begin optimization report for: DiscreteMap::printMap(DiscreteMap *, std::__cxx11::string *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(376,3)
+   remark #15523: loop was not vectorized: loop control variable i was found, but loop iteration count cannot be computed before executing the loop
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/discreteMap.cc(378,5)
+      remark #15523: loop was not vectorized: loop control variable j was found, but loop iteration count cannot be computed before executing the loop
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: std::__fill_n_a<std::_Vector_base<int, std::allocator<int>>::pointer, std::vector<int, std::allocator<int>>::size_type, std::iterator_traits<std::_Vector_base<int, std::allocator<int>>::pointer>::value_type>(std::_Vector_base<int, std::allocator<int>>::pointer, std::vector<int, std::allocator<int>>::size_type, const std::iterator_traits<std::_Vector_base<int, std::allocator<int>>::pointer>::value_type &)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7)
+   remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 1.857
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.430 
+   remark #15478: estimated potential speedup: 5.140 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(752,7)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference *__first has unaligned access   [ /apps/all/GCCcore/8.2.0/include/c++/8.2.0/bits/stl_algobase.h(754,3) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.143
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 0.430 
+   remark #15478: estimated potential speedup: 5.140 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================

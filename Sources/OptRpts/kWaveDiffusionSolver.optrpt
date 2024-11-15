@@ -1,0 +1,1735 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 19.0.1.144 Build 20181018
+
+Compiler options: -std=c++11 -O3 -mkl -ffast-math -xhost -qopenmp-simd -qopenmp -lpthread -xhost -g -qopt-report=5 -qopt-report-phase=vec,par -vecabi=cmdtarget -o hifu_test
+
+Begin optimization report for: kWaveDiffusionSolver2D::kWaveDiffusionSolver2D(kWaveDiffusionSolver2D *, int, int, const float *, const float *, const float *, float *, const float *, const float *, float *, float *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,47) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,43) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,47) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,43) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(415,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+      remark #15389: vectorization support: reference U23_V->mK2[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,28) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,41) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.389
+      remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 14 
+      remark #15477: vector cost: 1.120 
+      remark #15478: estimated potential speedup: 8.410 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference U23_V->mK2[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,28) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,41) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.700
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 14 
+      remark #15477: vector cost: 1.120 
+      remark #15478: estimated potential speedup: 8.410 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(105,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(236,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(111,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between pTemperature (239:7) and pCem43 (240:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between pCem43 (240:7) and pTemperature (239:7)
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(236,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(111,3)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(113,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(113,3)
+   remark #15388: vectorization support: reference pDiffusionP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,9) ]
+   remark #15388: vectorization support: reference pMatlabMediumDensity has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,35) ]
+   remark #15388: vectorization support: reference pMatlabMediumSpecificHeat has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,61) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.135
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 34 
+   remark #15477: vector cost: 4.620 
+   remark #15478: estimated potential speedup: 5.820 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(113,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pDiffusionP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,9) ]
+   remark #15388: vectorization support: reference pMatlabMediumDensity has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,35) ]
+   remark #15388: vectorization support: reference pMatlabMediumSpecificHeat has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,61) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.270
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 34 
+   remark #15477: vector cost: 4.620 
+   remark #15478: estimated potential speedup: 5.820 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(113,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(263,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(113,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(263,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(113,3)
+   remark #15389: vectorization support: reference pDiffusionP2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(266,9) ]
+   remark #15389: vectorization support: reference pMatlabMediumThermalConductivity has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(266,27) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 3.333
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 0.370 
+   remark #15478: estimated potential speedup: 8.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(263,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(113,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(269,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(113,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(269,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(113,3)
+   remark #15389: vectorization support: reference pDiffusionP1 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,62) ]
+   remark #15389: vectorization support: reference pDiffusionP2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,80) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.375
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.000 
+   remark #15478: estimated potential speedup: 7.200 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(269,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(113,3)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference pDiffusionP1 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,62) ]
+   remark #15389: vectorization support: reference pDiffusionP2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,80) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 4.556
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.000 
+   remark #15478: estimated potential speedup: 7.200 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::kWaveDiffusionSolver2D(kWaveDiffusionSolver2D *const, int, int, const float *, const float *, const float *, float *, const float *, const float *, float *, float *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,47) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,43) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,47) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,43) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(415,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+      remark #15389: vectorization support: reference U23_V->mK2[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,28) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,41) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.389
+      remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 14 
+      remark #15477: vector cost: 1.120 
+      remark #15478: estimated potential speedup: 8.410 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference U23_V->mK2[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,28) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,41) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.700
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 14 
+      remark #15477: vector cost: 1.120 
+      remark #15478: estimated potential speedup: 8.410 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(236,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between pTemperature (239:7) and pCem43 (240:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between pCem43 (240:7) and pTemperature (239:7)
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(236,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Remainder>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+   remark #15388: vectorization support: reference pDiffusionP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,9) ]
+   remark #15388: vectorization support: reference pMatlabMediumDensity has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,35) ]
+   remark #15388: vectorization support: reference pMatlabMediumSpecificHeat has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,61) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.135
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 34 
+   remark #15477: vector cost: 4.620 
+   remark #15478: estimated potential speedup: 5.820 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pDiffusionP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,9) ]
+   remark #15388: vectorization support: reference pMatlabMediumDensity has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,35) ]
+   remark #15388: vectorization support: reference pMatlabMediumSpecificHeat has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,61) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.270
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 34 
+   remark #15477: vector cost: 4.620 
+   remark #15478: estimated potential speedup: 5.820 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(263,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(263,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+   remark #15389: vectorization support: reference pDiffusionP2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(266,9) ]
+   remark #15389: vectorization support: reference pMatlabMediumThermalConductivity has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(266,27) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 3.333
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 0.370 
+   remark #15478: estimated potential speedup: 8.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(263,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(269,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(269,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+   remark #15389: vectorization support: reference pDiffusionP1 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,62) ]
+   remark #15389: vectorization support: reference pDiffusionP2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,80) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.375
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.000 
+   remark #15478: estimated potential speedup: 7.200 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(269,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(83,25)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference pDiffusionP1 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,62) ]
+   remark #15389: vectorization support: reference pDiffusionP2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,80) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 4.556
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.000 
+   remark #15478: estimated potential speedup: 7.200 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::loadInputData(kWaveDiffusionSolver2D *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(236,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between pTemperature (239:7) and pCem43 (240:7)
+   remark #15346: vector dependence: assumed OUTPUT dependence between pCem43 (240:7) and pTemperature (239:7)
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(236,3)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::createDiffusionTerms(kWaveDiffusionSolver2D *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5)
+   remark #15388: vectorization support: reference pDiffusionP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,9) ]
+   remark #15388: vectorization support: reference pMatlabMediumDensity has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,35) ]
+   remark #15388: vectorization support: reference pMatlabMediumSpecificHeat has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,61) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.135
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 34 
+   remark #15477: vector cost: 4.620 
+   remark #15478: estimated potential speedup: 5.820 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pDiffusionP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,9) ]
+   remark #15388: vectorization support: reference pMatlabMediumDensity has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,35) ]
+   remark #15388: vectorization support: reference pMatlabMediumSpecificHeat has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(260,61) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.270
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 34 
+   remark #15477: vector cost: 4.620 
+   remark #15478: estimated potential speedup: 5.820 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(257,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(263,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(263,5)
+   remark #15389: vectorization support: reference pDiffusionP2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(266,9) ]
+   remark #15389: vectorization support: reference pMatlabMediumThermalConductivity has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(266,27) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 3.333
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 5 
+   remark #15477: vector cost: 0.370 
+   remark #15478: estimated potential speedup: 8.420 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(263,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(269,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(269,5)
+   remark #15389: vectorization support: reference pDiffusionP1 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,62) ]
+   remark #15389: vectorization support: reference pDiffusionP2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,80) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.375
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.000 
+   remark #15478: estimated potential speedup: 7.200 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(269,5)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference pDiffusionP1 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,62) ]
+   remark #15389: vectorization support: reference pDiffusionP2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(272,80) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 4.556
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.000 
+   remark #15478: estimated potential speedup: 7.200 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::takeTimeStep(kWaveDiffusionSolver2D *, int, bool, float)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(577,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+   remark #15523: loop was not vectorized: loop control variable n was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(438,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(286,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(438,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(286,3)
+   remark #15389: vectorization support: reference U27_V->mKappa[i] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(441,7) ]
+   remark #15389: vectorization support: reference pK2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(441,41) ]
+   remark #15389: vectorization support: reference U27_V->mKappa[i] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(442,60) ]
+   remark #15389: vectorization support: reference U27_V->mKappa[i] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(442,75) ]
+   remark #15389: vectorization support: reference U27_V->mKappa[i] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(442,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.133
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 147 
+   remark #15477: vector cost: 17.870 
+   remark #15478: estimated potential speedup: 6.360 
+   remark #15482: vectorized math library calls: 1 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(438,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(286,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(393,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(288,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(399,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(288,3)
+      remark #15389: vectorization support: reference pKappa has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(401,37) ]
+      remark #15389: vectorization support: reference U1e_V->mDerivX->_M_value[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(402,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(402,51) ]
+      remark #15389: vectorization support: reference U1e_V->mDerivY->_M_value[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(403,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.190
+      remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 59 
+      remark #15477: vector cost: 7.870 
+      remark #15478: estimated potential speedup: 6.860 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(399,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(288,3)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference pKappa has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(401,37) ]
+      remark #15389: vectorization support: reference U1e_V->mDerivX->_M_value[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(402,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(402,51) ]
+      remark #15389: vectorization support: reference U1e_V->mDerivY->_M_value[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(403,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.415
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 59 
+      remark #15477: vector cost: 7.870 
+      remark #15478: estimated potential speedup: 6.860 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(399,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(288,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(536,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(293,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(536,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(293,5)
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(539,5) ]
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,16) ]
+   remark #15389: vectorization support: reference pKappa has unaligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,31) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.300
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 7.720 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(536,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(293,5)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(539,5) ]
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,16) ]
+   remark #15389: vectorization support: reference pKappa has unaligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,31) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.167
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 7.720 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(546,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(293,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(546,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(293,5)
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,5) ]
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,17) ]
+   remark #15388: vectorization support: reference pDiffP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,29) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.786
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 10 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 7.830 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(546,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(293,5)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,5) ]
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,17) ]
+   remark #15388: vectorization support: reference pDiffP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,29) ]
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.571
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 10 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 7.830 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(592,7) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(592,7) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,9) ]
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,9) ]
+   remark #15388: vectorization support: reference pTempRealArray has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,36) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 10 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 7.810 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(592,7) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,9) ]
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,9) ]
+   remark #15388: vectorization support: reference pTempRealArray has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,36) ]
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.714
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 10 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 7.810 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(583,7) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(583,7) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,9) ]
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,9) ]
+   remark #15388: vectorization support: reference pTempRealArray has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,36) ]
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,73) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.667
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 3 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 13 
+   remark #15477: vector cost: 1.120 
+   remark #15478: estimated potential speedup: 7.920 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(583,7) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,9) ]
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,9) ]
+   remark #15388: vectorization support: reference pTempRealArray has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,36) ]
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,73) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.333
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 3 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 13 
+   remark #15477: vector cost: 1.120 
+   remark #15478: estimated potential speedup: 7.920 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(583,7) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(599,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(599,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+   remark #15389: vectorization support: reference pTemperature has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(604,57) ]
+   remark #15389: vectorization support: reference pCem43 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(605,9) ]
+   remark #15389: vectorization support: reference pCem43 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(605,21) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.116
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 147 
+   remark #15477: vector cost: 15.120 
+   remark #15478: estimated potential speedup: 7.180 
+   remark #15482: vectorized math library calls: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(599,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(612,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between pOutPtr1 (615:5) and pOutPtr2 (616:5)
+   remark #15346: vector dependence: assumed OUTPUT dependence between pOutPtr2 (616:5) and pOutPtr1 (615:5)
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(612,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(296,3)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::preProcessing(kWaveDiffusionSolver2D *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(336,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(336,3)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,47) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(336,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(336,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(336,3)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,43) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(336,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(337,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(337,3)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(363,47) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(359,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(337,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(337,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(337,3)
+   remark #15389: vectorization support: reference k_vec has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15410: vectorization support: conversion from int to float will be emulated   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(372,43) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.053
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 9 
+   remark #15477: vector cost: 14.250 
+   remark #15478: estimated potential speedup: 0.630 
+   remark #15487: type converts: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(368,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(337,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(415,3) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(339,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(339,3)
+      remark #15389: vectorization support: reference U23_V->mK2[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,28) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,41) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.389
+      remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 14 
+      remark #15477: vector cost: 1.120 
+      remark #15478: estimated potential speedup: 8.410 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(339,3)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference U23_V->mK2[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,28) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,41) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.700
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 14 
+      remark #15477: vector cost: 1.120 
+      remark #15478: estimated potential speedup: 8.410 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5) inlined into FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(339,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::makeDerivMatrix(kWaveDiffusionSolver2D *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(393,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(399,5)
+      remark #15389: vectorization support: reference pKappa has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(401,37) ]
+      remark #15389: vectorization support: reference this->mDerivX->_M_value[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(402,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(402,51) ]
+      remark #15389: vectorization support: reference this->mDerivY->_M_value[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(403,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.190
+      remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 59 
+      remark #15477: vector cost: 7.870 
+      remark #15478: estimated potential speedup: 6.860 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(399,5)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference pKappa has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(401,37) ]
+      remark #15389: vectorization support: reference this->mDerivX->_M_value[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(402,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(402,51) ]
+      remark #15389: vectorization support: reference this->mDerivY->_M_value[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(403,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.415
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 59 
+      remark #15477: vector cost: 7.870 
+      remark #15478: estimated potential speedup: 6.860 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(399,5)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::makeK2(kWaveDiffusionSolver2D *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(415,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5)
+      remark #15389: vectorization support: reference this->mK2[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,28) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,41) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.389
+      remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 14 
+      remark #15477: vector cost: 1.120 
+      remark #15478: estimated potential speedup: 8.410 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference this->mK2[indexBase+x] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,7) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,28) ]
+      remark #15388: vectorization support: reference pKx_vec has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(421,41) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.700
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 14 
+      remark #15477: vector cost: 1.120 
+      remark #15478: estimated potential speedup: 8.410 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(419,5)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::makeKappa(kWaveDiffusionSolver2D *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(438,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(438,5)
+   remark #15389: vectorization support: reference this->mKappa[i] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(441,7) ]
+   remark #15389: vectorization support: reference pK2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(441,41) ]
+   remark #15389: vectorization support: reference this->mKappa[i] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(442,60) ]
+   remark #15389: vectorization support: reference this->mKappa[i] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(442,75) ]
+   remark #15389: vectorization support: reference this->mKappa[i] has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(442,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.133
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 147 
+   remark #15477: vector cost: 17.870 
+   remark #15478: estimated potential speedup: 6.360 
+   remark #15482: vectorized math library calls: 1 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(438,5)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::createQTermScale(kWaveDiffusionSolver2D *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(507,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(507,3)
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(510,7) ]
+   remark #15389: vectorization support: reference pKappa has unaligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,31) ]
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,16) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.077
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 16 
+   remark #15477: vector cost: 1.620 
+   remark #15478: estimated potential speedup: 8.580 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(507,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(510,7) ]
+   remark #15389: vectorization support: reference pKappa has unaligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,31) ]
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,16) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.750
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 16 
+   remark #15477: vector cost: 1.620 
+   remark #15478: estimated potential speedup: 8.580 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::createQTermDiff(kWaveDiffusionSolver2D *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(536,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(536,3)
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(539,5) ]
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,16) ]
+   remark #15389: vectorization support: reference pKappa has unaligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,31) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.300
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 7.720 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(536,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(539,5) ]
+   remark #15388: vectorization support: reference tempFftwArray[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,16) ]
+   remark #15389: vectorization support: reference pKappa has unaligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,31) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 2.167
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 7.720 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(546,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(546,3)
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,5) ]
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,17) ]
+   remark #15388: vectorization support: reference pDiffP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,29) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.786
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 10 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 7.830 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(546,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,5) ]
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,17) ]
+   remark #15388: vectorization support: reference pDiffP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(549,29) ]
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.571
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 10 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 7.830 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::computeMainLoop(kWaveDiffusionSolver2D *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(577,3)
+   remark #15523: loop was not vectorized: loop control variable n was found, but loop iteration count cannot be computed before executing the loop
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(592,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(592,7)
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,9) ]
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,9) ]
+   remark #15388: vectorization support: reference pTempRealArray has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,36) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 10 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 7.810 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(592,7)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,9) ]
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,9) ]
+   remark #15388: vectorization support: reference pTempRealArray has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(596,36) ]
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.714
+   remark #15448: unmasked aligned unit stride loads: 2 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 10 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 7.810 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(583,7)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(583,7)
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,9) ]
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,9) ]
+   remark #15388: vectorization support: reference pTempRealArray has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,36) ]
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,73) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.667
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 3 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 13 
+   remark #15477: vector cost: 1.120 
+   remark #15478: estimated potential speedup: 7.920 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(583,7)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,9) ]
+   remark #15388: vectorization support: reference pTemperature has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,9) ]
+   remark #15388: vectorization support: reference pTempRealArray has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,36) ]
+   remark #15388: vectorization support: reference pQTerm has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(587,73) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.333
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 3 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 13 
+   remark #15477: vector cost: 1.120 
+   remark #15478: estimated potential speedup: 7.920 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(583,7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(599,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(599,5)
+   remark #15389: vectorization support: reference pTemperature has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(604,57) ]
+   remark #15389: vectorization support: reference pCem43 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(605,9) ]
+   remark #15389: vectorization support: reference pCem43 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(605,21) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.116
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 147 
+   remark #15477: vector cost: 15.120 
+   remark #15478: estimated potential speedup: 7.180 
+   remark #15482: vectorized math library calls: 1 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(599,5)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(612,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between pOutPtr1 (615:5) and pOutPtr2 (616:5)
+   remark #15346: vector dependence: assumed OUTPUT dependence between pOutPtr2 (616:5) and pOutPtr1 (615:5)
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(612,3)
+<Remainder>
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::computeDTermHeterogenous(kWaveDiffusionSolver2D *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(684,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(684,3)
+   remark #15388: vectorization support: reference pTempFftwArray1[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,16) ]
+   remark #15388: vectorization support: reference pTempFftwArray2[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(689,5) ]
+   remark #15388: vectorization support: reference pDerivY[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,31) ]
+   remark #15388: vectorization support: reference pTempFftwArray1[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(690,5) ]
+   remark #15388: vectorization support: reference pDerivX[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,31) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.265
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 3 
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 23 
+   remark #15477: vector cost: 6.120 
+   remark #15478: estimated potential speedup: 3.590 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(684,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pTempFftwArray1[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,16) ]
+   remark #15388: vectorization support: reference pTempFftwArray2[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(689,5) ]
+   remark #15388: vectorization support: reference pDerivY[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,31) ]
+   remark #15388: vectorization support: reference pTempFftwArray1[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(690,5) ]
+   remark #15388: vectorization support: reference pDerivX[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,31) ]
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.520
+   remark #15448: unmasked aligned unit stride loads: 3 
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 23 
+   remark #15477: vector cost: 6.120 
+   remark #15478: estimated potential speedup: 3.590 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(702,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(702,3)
+   remark #15388: vectorization support: reference pTempRealArray1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(705,5) ]
+   remark #15388: vectorization support: reference pTempRealArray1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(705,26) ]
+   remark #15388: vectorization support: reference diffP2 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(705,47) ]
+   remark #15388: vectorization support: reference pTempRealArray2 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(706,5) ]
+   remark #15388: vectorization support: reference pTempRealArray2 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(706,26) ]
+   remark #15388: vectorization support: reference diffP2 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(706,47) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 4 
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 15 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 8.180 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(702,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pTempRealArray1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(705,5) ]
+   remark #15388: vectorization support: reference pTempRealArray1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(705,26) ]
+   remark #15388: vectorization support: reference diffP2 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(705,47) ]
+   remark #15388: vectorization support: reference pTempRealArray2 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(706,5) ]
+   remark #15388: vectorization support: reference pTempRealArray2 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(706,26) ]
+   remark #15388: vectorization support: reference diffP2 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(706,47) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.000
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 4 
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 15 
+   remark #15477: vector cost: 1.250 
+   remark #15478: estimated potential speedup: 8.180 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(702,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(717,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(717,3)
+   remark #15388: vectorization support: reference pTempFftwArray1[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(720,5) ]
+   remark #15388: vectorization support: reference pTempFftwArray1[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,16) ]
+   remark #15388: vectorization support: reference pDerivX[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,31) ]
+   remark #15388: vectorization support: reference pTempFftwArray2[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(721,5) ]
+   remark #15388: vectorization support: reference pTempFftwArray2[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,16) ]
+   remark #15388: vectorization support: reference pDerivY[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,31) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.261
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 4 
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 27 
+   remark #15477: vector cost: 5.750 
+   remark #15478: estimated potential speedup: 4.440 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(717,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pTempFftwArray1[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(720,5) ]
+   remark #15388: vectorization support: reference pTempFftwArray1[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,16) ]
+   remark #15388: vectorization support: reference pDerivX[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,31) ]
+   remark #15388: vectorization support: reference pTempFftwArray2[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(721,5) ]
+   remark #15388: vectorization support: reference pTempFftwArray2[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,16) ]
+   remark #15388: vectorization support: reference pDerivY[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(125,31) ]
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.500
+   remark #15448: unmasked aligned unit stride loads: 4 
+   remark #15449: unmasked aligned unit stride stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 27 
+   remark #15477: vector cost: 5.750 
+   remark #15478: estimated potential speedup: 4.440 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(732,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(732,3)
+   remark #15388: vectorization support: reference pTempRealArray1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(735,5) ]
+   remark #15388: vectorization support: reference pTempRealArray1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(735,27) ]
+   remark #15388: vectorization support: reference pTempRealArray2 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(735,48) ]
+   remark #15388: vectorization support: reference diffP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(735,70) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.714
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 3 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 8.370 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(732,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pTempRealArray1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(735,5) ]
+   remark #15388: vectorization support: reference pTempRealArray1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(735,27) ]
+   remark #15388: vectorization support: reference pTempRealArray2 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(735,48) ]
+   remark #15388: vectorization support: reference diffP1 has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(735,70) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.429
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 3 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 0.870 
+   remark #15478: estimated potential speedup: 8.370 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(732,3)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: kWaveDiffusionSolver2D::computeDTermHomogenous(kWaveDiffusionSolver2D *)
+
+    Report from: Vector & Auto-parallelization optimizations [vec, par]
+
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(642,3)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(642,3)
+   remark #15388: vectorization support: reference pTempFftwArray[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(645,5) ]
+   remark #15389: vectorization support: reference pKappa has unaligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,31) ]
+   remark #15388: vectorization support: reference pTempFftwArray[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,16) ]
+   remark #15389: vectorization support: reference pObjK2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(645,58) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.857
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 28 
+   remark #15477: vector cost: 2.620 
+   remark #15478: estimated potential speedup: 9.260 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(642,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference pTempFftwArray[i] has aligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(645,5) ]
+   remark #15389: vectorization support: reference pKappa has unaligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,31) ]
+   remark #15388: vectorization support: reference pTempFftwArray[i] has aligned access   [ /apps/all/icc/2019.1.144-GCC-8.2.0-2.31.1/compilers_and_libraries_2019.1.144/linux/compiler/include/complex(179,16) ]
+   remark #15389: vectorization support: reference pObjK2 has unaligned access   [ FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(645,58) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 2
+   remark #15309: vectorization support: normalized vectorization overhead 1.286
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 28 
+   remark #15477: vector cost: 2.620 
+   remark #15478: estimated potential speedup: 9.260 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at FitnessFunc/HIFUScore/KWaveDiffusionSolver/kWaveDiffusionSolver.cc(642,3)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
